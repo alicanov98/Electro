@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  transition: 0.3s ease;
+  color: #333;
+}
+
+.body {
+  font-size: 14px;
+  line-height: 1.42857143;
+  font-weight: 400;
+  color: #333;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+@media (max-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* -------------------------- START HEADER SECTION -------------------------- */
+.header .top-header {
+  width: 100%;
+  height: 40px;
+  background-color: #1e1f29;
+  padding: 10px 0;
+}
+.header .top-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .top-header .container .top-header-left .info-list {
+  width: 100%;
+  display: flex;
+}
+.header .top-header .container .top-header-left .info-list .info-item {
+  margin-right: 15px;
+}
+.header .top-header .container .top-header-left .info-list .info-item a {
+  font-size: 12px;
+  color: #fff;
+  font-weight: 500;
+  line-height: 1.4;
+  font-family: "Montserrat", sans-serif;
+}
+.header .top-header .container .top-header-left .info-list .info-item a:hover {
+  color: #d10024;
+}
+.header .top-header .container .top-header-left .info-list .info-item a .fa-solid {
+  color: #d10024;
+  margin-right: 5px;
+}
+.header .top-header .container .top-header-right .info-list {
+  display: flex;
+}
+.header .top-header .container .top-header-right .info-list .info-item {
+  margin-right: 15px;
+}
+.header .top-header .container .top-header-right .info-list .info-item a {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  color: #fff;
+  font-weight: 500;
+  line-height: 1.4;
+}
+.header .top-header .container .top-header-right .info-list .info-item a:hover {
+  color: #d10024;
+}
+.header .top-header .container .top-header-right .info-list .info-item a .fa-solid {
+  color: #d10024;
+  margin-right: 5px;
+}
+.header .bottom-header {
+  background-color: #15161d;
+  padding: 15px 0;
+}
+.header .bottom-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .bottom-header .container .logo {
+  padding: 0 15px;
+}
+.header .bottom-header .container .search {
+  padding: 15px 0;
+}
+.header .bottom-header .container .search form .input-select {
+  font-weight: 400;
+  font-size: 14px;
+  margin: 0 -4px 0 0;
+  padding: 0 15px;
+  height: 40px;
+  border-radius: 40px 0 0 40px;
+  border: 1px solid #e4e7ed;
+  background-color: #fff;
+  font-size: 14px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+.header .bottom-header .container .search form .search-input {
+  width: 295px;
+  background-color: #fff;
+  border: 1px solid #e4e7ed;
+  font-weight: 400;
+  font-size: 14px;
+  margin: 0 -4px 0 0;
+  padding: 0 15px;
+  height: 40px;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+}
+.header .bottom-header .container .search form .search-btn {
+  width: 100px;
+  margin: 0 -4px 0 0;
+  padding: 1px 6px;
+  background-color: #d10024;
+  border-radius: 0 40px 40px 0;
+  height: 40px;
+  color: #fff;
+  border: none;
+  font-weight: 700;
+  font-size: 14px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+}
+.header .bottom-header .container .userArea {
+  width: 25%;
+  padding: 0 15px;
+  line-height: 1.4;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+}
+.header .bottom-header .container .userArea .userAreaCard {
+  width: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+.header .bottom-header .container .userArea .userAreaCard i {
+  color: #ffffff;
+  font-size: 18px;
+}
+.header .bottom-header .container .userArea .userAreaCard .userAreaCardTitle {
+  font-size: 12px;
+  color: #ffffff;
+  font-weight: 500;
+}
+.header .bottom-header .container .userArea .userAreaCard .userAreaCardCounter {
+  position: absolute;
+  top: -10px;
+  right: 15px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  font-size: 10px;
+  color: #ffffff;
+  background-color: #D10024;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-bar {
+  height: 62px;
+  border-top: #d10024 3px solid;
+  border-bottom: 2px solid #e4e7ed;
+}
+.nav-bar .container .nav-list {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.nav-bar .container .nav-list .nav-item {
+  cursor: pointer;
+  display: flex;
+  margin-left: 30px;
+}
+.nav-bar .container .nav-list .nav-item:nth-child(1) {
+  margin-left: 0;
+}
+.nav-bar .container .nav-list .nav-item a {
+  padding: 20px 0;
+  color: #2b2d42;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+.nav-bar .container .nav-list .nav-item a::after {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 2px;
+  background-color: #D10024;
+  transition: 0.2s all;
+}
+.nav-bar .container .nav-list .nav-item a:hover {
+  color: #D10024;
+  transition: 0.2s all;
+}
+.nav-bar .container .nav-list .nav-item a:hover::after {
+  width: 100%;
+}
+.nav-bar .container .nav-list .nav-item .active {
+  color: #D10024;
+}
+.nav-bar .container .nav-list .nav-item .active::after {
+  width: 100%;
+}
+
+/* -------------------------- END HEADER SECTION -------------------------- *//*# sourceMappingURL=main.css.map */

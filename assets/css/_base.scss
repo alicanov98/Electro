@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+// Reset codes
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    transition: .3s ease;
+    color: #333;
+    
+}
+.body{
+    font-size: 14px;
+    line-height: 1.42857143;
+    font-weight: 400;
+    color: #333;
+}
+
+
+.container{
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+@media (min-width: 1200px){
+    .container{
+        width: 1170px;
+    }
+}
+
+@media (max-width: 992px){
+    .container{
+        width: 970px;
+    }
+}
+
+@media(max-width: 768px){
+    .container{
+        width: 750px;
+    }
+}

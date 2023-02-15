@@ -94,7 +94,7 @@
       <div class="container">
         <ul class="nav-list">
           <li class="nav-item"><a href="./index.html">Home</a></li>
-          <li class="nav-item"><a class="active" href="./hot-deals.html">Hot Deals</a></li>
+          <li class="nav-item"><a href="./hot-deals.html">Hot Deals</a></li>
           <li class="nav-item"><a href="./categories.html">Categories</a></li>
           <li class="nav-item"><a href="./laptops.html">Laptops</a></li>
           <li class="nav-item"><a href="./smartphones.html">Smartphones</a></li>
@@ -106,11 +106,43 @@
     <!-- ----------------------------------------------------------------------- -->
     <!--                           END HEADER SECTION                            -->
     <!-- ----------------------------------------------------------------------- -->
+    <main>
+      <section class="my-accound">
+        <div class="container">
+          <div class="login-accound">
+            <h3 class="accound-title">Log into Your Account</h3>
+            <p></p>
+            <form class="form-accound">
+              <p class="title">Username or Email</p>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                class="input"
+                required
+              />
+              <p class="title">Password</p>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                class="input"
+                required
+              />
+              <p class="title">Remember Me</p>
+              <button class="btn" id="btn2" type="submit" onclick="accound()">LOG IN</button>
+              <p class="lost-password" ><a href="./my-accound.html" >Lost Password?</a></p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
     <!-- FONTAWESOME -->
     <script
       src="https://kit.fontawesome.com/4679a6cec2.js"
       crossorigin="anonymous"
     ></script>
     <!-- FONTAWESOME -->
+    <script src="./assets/js/accound.js"></script>
   </body>
 </html>

@@ -43,7 +43,7 @@
                 >
               </li>
               <li class="info-item">
-                <a href="index.html"
+                <a class="active" href="./my-accound.html"
                   ><i class="fa-solid fa-user"></i>My Account</a
                 >
               </li>
@@ -79,10 +79,24 @@
               <span class="userAreaCardTitle">Your Wishlist</span>
               <span class="userAreaCardCounter">2</span>
             </div>
-            <div class="userAreaCard">
+            <div class="userAreaCard" onclick="openCard()">
               <i class="fa-solid fa-cart-shopping"></i>
               <span class="userAreaCardTitle">Your Cart</span>
-              <span class="userAreaCardCounter">3</span>
+              <span class="userAreaCardCounter" id="cardPlus">0</span>
+            </div>
+            <div class="cardDropdown">
+              <div class="cartBox">
+                <div class="cardList" id="cartList">
+                </div>
+                <div class="cardSummary">
+                  <small>0 Item(s) selected</small>
+                  <h5>SUBTOTAL: $0</h5>
+                </div>
+              </div>
+              <div class="cardBtns">
+                <a href="#">View Cart</a>
+                <a href="#">Checkout <i class="fa-solid fa-right-long"></i></a>
+              </div>
             </div>
           </div>
         </div>
@@ -95,11 +109,11 @@
             <a class="active" href="./index.html">Home</a>
           </li>
           <li class="nav-item"><a href="./hot-deals.html">Hot Deals</a></li>
-          <li class="nav-item"><a href="#">Categories</a></li>
-          <li class="nav-item"><a href="#">Laptops</a></li>
-          <li class="nav-item"><a href="#">Smartphones</a></li>
-          <li class="nav-item"><a href="#">Cameras</a></li>
-          <li class="nav-item"><a href="#">Accessories</a></li>
+          <li class="nav-item"><a href="./categories.html">Categories</a></li>
+          <li class="nav-item"><a href="./laptops.html">Laptops</a></li>
+          <li class="nav-item"><a href="./smartphones.html">Smartphones</a></li>
+          <li class="nav-item"><a href="./cameras.html">Cameras</a></li>
+          <li class="nav-item"><a href="./accessories.html">Accessories</a></li>
         </ul>
       </div>
     </nav>
@@ -180,15 +194,18 @@
             </div>
           </div>
           <div class="new-production-card-box">
-            <div class="card-info">
+            <div class="card-info" id="item1">
               <div class="card">
                 <div class="image">
                   <img src="./assets/image/shop01.png.webp" alt="img" />
                 </div>
                 <div class="card-content">
                   <p class="title">CATEGORY</p>
-                  <h3><a href="#">PRODUCT NAME GOES HERE</a></h3>
-                  <h4>$980.00 <span>$990.00</span></h4>
+                  <h3><a href="#">Laptop</a></h3>
+                  <h4>
+                    <p>$980.00</p>
+                    <span>$1200.00</span>
+                  </h4>
                   <div class="product-rating">
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
@@ -208,21 +225,24 @@
                 </div>
               </div>
               <div class="card-button">
-                <button>
+                <button onclick="addToCart(item1)">
                   <i class="fa-solid fa-cart-shopping"></i>
                   ADD TO CARD
                 </button>
               </div>
             </div>
-            <div class="card-info">
+            <div class="card-info" id="item2">
               <div class="card">
                 <div class="image">
                   <img src="./assets/image/shop03.png.webp" alt="img" />
                 </div>
                 <div class="card-content">
                   <p class="title">CATEGORY</p>
-                  <h3><a href="#">PRODUCT NAME GOES HERE</a></h3>
-                  <h4>$980.00 <span>$990.00</span></h4>
+                  <h3><a href="#">Headset</a></h3>
+                  <h4>
+                    <p>$780.00</p>
+                    <span>$990.00</span>
+                  </h4>
                   <div class="product-rating">
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
@@ -242,21 +262,24 @@
                 </div>
               </div>
               <div class="card-button">
-                <button>
+                <button onclick="addToCart(item2)">
                   <i class="fa-solid fa-cart-shopping"></i>
                   ADD TO CARD
                 </button>
               </div>
             </div>
-            <div class="card-info">
+            <div class="card-info" id="item3">
               <div class="card">
                 <div class="image">
                   <img src="./assets/image/product04.png.webp" alt="img" />
                 </div>
                 <div class="card-content">
                   <p class="title">CATEGORY</p>
-                  <h3><a href="#">PRODUCT NAME GOES HERE</a></h3>
-                  <h4>$980.00 <span>$990.00</span></h4>
+                  <h3><a href="#">Tablet</a></h3>
+                  <h4>
+                    <p>$380.00</p>
+                    <span>$560.00</span>
+                  </h4>
                   <div class="product-rating">
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
@@ -276,21 +299,24 @@
                 </div>
               </div>
               <div class="card-button">
-                <button>
+                <button onclick="addToCart(item3)">
                   <i class="fa-solid fa-cart-shopping"></i>
                   ADD TO CARD
                 </button>
               </div>
             </div>
-            <div class="card-info">
+            <div class="card-info" id="item4">
               <div class="card">
                 <div class="image">
                   <img src="./assets/image/product05.png.webp" alt="img" />
                 </div>
                 <div class="card-content">
                   <p class="title">CATEGORY</p>
-                  <h3><a href="#">PRODUCT NAME GOES HERE</a></h3>
-                  <h4>$980.00 <span>$990.00</span></h4>
+                  <h3><a href="#">Headphone Pro</a></h3>
+                  <h4>
+                    <p>$780.00</p>
+                    <span>$980.00</span>
+                  </h4>
                   <div class="product-rating">
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
@@ -310,7 +336,7 @@
                 </div>
               </div>
               <div class="card-button">
-                <button>
+                <button onclick="addToCart(item4)">
                   <i class="fa-solid fa-cart-shopping"></i>
                   ADD TO CARD
                 </button>
@@ -629,29 +655,35 @@
       <!--                        START NEWSLETTER SECTION                         -->
       <!-- ----------------------------------------------------------------------- -->
       <section class="newsletter">
-      <div class="container">
-        <div class="content">
-          <p>Sign Up for the <strong>NEWSLETTER</strong></p>
-          <form>
-            <input class="input" type="email" placeholder="Enter Your Email">
-            <button class="newsletter-btn"><i class="fa-solid fa-envelope"></i> Subscribe</button>
-          </form>
-          <ul class="newsletter-social">
-          <li class="social-item">
-          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-          </li>
-          <li class="social-item">
-            <a href="#"><i class="fa-brands fa-twitter"></i></i></a>
-            </li>
-            <li class="social-item">
-              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <div class="container">
+          <div class="content">
+            <p>Sign Up for the <strong>NEWSLETTER</strong></p>
+            <form>
+              <input
+                class="input"
+                type="email"
+                placeholder="Enter Your Email"
+              />
+              <button class="newsletter-btn">
+                <i class="fa-solid fa-envelope"></i> Subscribe
+              </button>
+            </form>
+            <ul class="newsletter-social">
+              <li class="social-item">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+              </li>
+              <li class="social-item">
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              </li>
+              <li class="social-item">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
               </li>
               <li class="social-item">
                 <a href="#"><i class="fa-brands fa-pinterest"></i></a>
-                </li>
-          </ul>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
       </section>
       <!-- ----------------------------------------------------------------------- -->
       <!--                         END NEWSLETTER SECTION                          -->
@@ -664,78 +696,91 @@
     <!-- ----------------------------------------------------------------------- -->
     <!--                          START FOOTER SECTION                           -->
     <!-- ----------------------------------------------------------------------- -->
-<footer>
-<div class="top-footer">
-  <div class="container">
-    <div class="content-footter">
-      <div class="about-us">
-        <h3>ABOUT US</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.</p>
-      <ul class="contact-list">
-        <li class="contact-item"><a href="#"><i class="fa-solid fa-location-dot"></i> 1734 Stonecoal Road</a></li>
-        <li class="contact-item"><a href="#"><i class="fa-solid fa-phone"></i>+021-95-51-84</a></li>
-        <li class="contact-item"><a href="#"><i class="fa-solid fa-envelope"></i>email@email.com</a></li>
-      </ul>
+    <footer>
+      <div class="top-footer">
+        <div class="container">
+          <div class="content-footter">
+            <div class="about-us">
+              <h3>ABOUT US</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut.
+              </p>
+              <ul class="contact-list">
+                <li class="contact-item">
+                  <a href="#"
+                    ><i class="fa-solid fa-location-dot"></i> 1734 Stonecoal
+                    Road</a
+                  >
+                </li>
+                <li class="contact-item">
+                  <a href="#"><i class="fa-solid fa-phone"></i>+021-95-51-84</a>
+                </li>
+                <li class="contact-item">
+                  <a href="#"
+                    ><i class="fa-solid fa-envelope"></i>email@email.com</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="footer-info">
+              <h3>CATEGORIES</h3>
+              <ul class="footer-list">
+                <li class="footer-item"><a href="#">Hot deals</a></li>
+                <li class="footer-item"><a href="#">Laptops</a></li>
+                <li class="footer-item"><a href="#">Smartphones</a></li>
+                <li class="footer-item"><a href="#">Cameras</a></li>
+                <li class="footer-item"><a href="#">Accessories</a></li>
+              </ul>
+            </div>
+            <div class="footer-info">
+              <h3>INFORMATION</h3>
+              <ul class="footer-list">
+                <li class="footer-item"><a href="#">About Us</a></li>
+                <li class="footer-item"><a href="#">Contact Us</a></li>
+                <li class="footer-item"><a href="#">Privacy Policy</a></li>
+                <li class="footer-item"><a href="#">Orders and Returns</a></li>
+                <li class="footer-item"><a href="#">Terms & Conditions</a></li>
+              </ul>
+            </div>
+            <div class="footer-info">
+              <h3>SERVICE</h3>
+              <ul class="footer-list">
+                <li class="footer-item"><a href="#">My Account</a></li>
+                <li class="footer-item"><a href="#">View Cart</a></li>
+                <li class="footer-item"><a href="#">Wishlist</a></li>
+                <li class="footer-item"><a href="#">Track My Order</a></li>
+                <li class="footer-item"><a href="#">Help</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="footer-info">
-        <h3>CATEGORIES</h3>
-        <ul class="footer-list">
-<li class="footer-item"><a href="#">Hot deals</a></li>
-<li class="footer-item"><a href="#">Laptops</a></li>
-<li class="footer-item"><a href="#">Smartphones</a></li>
-<li class="footer-item"><a href="#">Cameras</a></li>
-<li class="footer-item"><a href="#">Accessories</a></li>
-        </ul>
-      </div>
-      <div class="footer-info">
-        <h3>INFORMATION</h3>
-        <ul class="footer-list">
-<li class="footer-item"><a href="#">About Us</a></li>
-<li class="footer-item"><a href="#">Contact Us</a></li>
-<li class="footer-item"><a href="#">Privacy Policy</a></li>
-<li class="footer-item"><a href="#">Orders and Returns</a></li>
-<li class="footer-item"><a href="#">Terms & Conditions</a></li>
-        </ul>
-      </div>
-      <div class="footer-info">
-        <h3>SERVICE</h3>
-        <ul class="footer-list">
-<li class="footer-item"><a href="#">My Account</a></li>
-<li class="footer-item"><a href="#">View Cart</a></li>
-<li class="footer-item"><a href="#">Wishlist</a></li>
-<li class="footer-item"><a href="#">Track My Order</a></li>
-<li class="footer-item"><a href="#">Help</a></li>
-        </ul>
-      </div>
-    </div>
-
-  </div>
-</div>
-<div class="footer-bottom">
-  <div class="container">
-    <ul class="online-card">
-  <li class="card-item">
-  <a href="#"><i class="fa-brands fa-cc-visa"></i></a>
-  </li>
-  <li class="card-item">
-    <a href="#"><i class="fa-solid fa-credit-card"></i></a>
-    </li>
-    <li class="card-item">
-      <a href="#"><i class="fa-brands fa-cc-paypal"></i></a>
-      </li>
-      <li class="card-item">
-        <a href="#"><i class="fa-brands fa-cc-mastercard"></i></a>
-        </li>
-        <li class="card-item">
-          <a href="#"><i class="fa-brands fa-cc-discover"></i></a>
-          </li>
-          <li class="card-item">
-            <a href="#"><i class="fa-brands fa-cc-amex"></i></a>
+      <div class="footer-bottom">
+        <div class="container">
+          <ul class="online-card">
+            <li class="card-item">
+              <a href="#"><i class="fa-brands fa-cc-visa"></i></a>
             </li>
-    </ul>
-  </div>
-</div>
-</footer>
+            <li class="card-item">
+              <a href="#"><i class="fa-solid fa-credit-card"></i></a>
+            </li>
+            <li class="card-item">
+              <a href="#"><i class="fa-brands fa-cc-paypal"></i></a>
+            </li>
+            <li class="card-item">
+              <a href="#"><i class="fa-brands fa-cc-mastercard"></i></a>
+            </li>
+            <li class="card-item">
+              <a href="#"><i class="fa-brands fa-cc-discover"></i></a>
+            </li>
+            <li class="card-item">
+              <a href="#"><i class="fa-brands fa-cc-amex"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
     <!-- ----------------------------------------------------------------------- -->
     <!--                            END FOOTER SECTION                              -->
     <!-- ----------------------------------------------------------------------- -->
@@ -746,5 +791,8 @@
       crossorigin="anonymous"
     ></script>
     <!-- Icons from FontAwesome -->
+    <!-- My Js -->
+    <script src="./assets/js/main.js"></script>
+    <!-- My Js -->
   </body>
 </html>

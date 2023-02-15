@@ -9,7 +9,7 @@
     padding: 10px 0;
     .container {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-between; 
       align-items: center;
       .top-header-left {
         .info-list {
@@ -94,7 +94,6 @@
             margin: 0 -4px 0 0;
             padding: 0 15px;
             height: 40px;
-            font-size: 14px;
             font-family: "Montserrat", sans-serif;
           }
           .search-btn {
@@ -126,6 +125,7 @@
           width: 90px;
           @include df-cen-col;
           position: relative;
+          cursor: pointer;
           i {
             color: #ffffff;
             font-size: 18px;
@@ -148,6 +148,113 @@
             font-weight: 500;
             @include df-cen;
           }
+        }
+        .cardDropdown {
+          width: 300px;
+          background-color: #fff;
+          position: absolute;
+          z-index: 99;
+          opacity: 1;
+          margin-top: 50px;
+          display: none;
+          .cartBox {
+            padding: 15px 15px 0 15px;
+            .cardList {
+              max-height: 180px;
+              overflow-y: scroll;
+              margin-bottom: 15px;
+              .productWidget {
+                color: #333;
+                display: flex;
+                position: relative;
+                .productImg {
+                  img {
+                    width: 60px;
+                  }
+                }
+                .productBody {
+                  padding-left: 10px;
+                  min-height: 60px;
+                  font-family: "Montserrat", sans-serif;
+                  font-weight: 400;
+                  color: #333;
+                  font-size: 14px;
+                  line-height: 1.42857143;
+                  margin: 0 10px 10px;
+                  h3 {
+                    a {
+                      font-weight: 700;
+                      transition: 0.2s color;
+                      cursor: pointer;
+                      font-size: 12px;
+                      line-height: 1.1;
+                      &:hover {
+                        color: #d10024;
+                      }
+                    }
+                  }
+                }
+                .delete {
+                  position: absolute;
+                  top: -10px;
+                  left: -10px;
+                  margin: 10px;
+                  height: 17px;
+                  text-align: center;
+                  width: 15px;
+                  font-size: 10px;
+                  line-height: 1.1;
+                  font-weight: 400;
+                  padding: 0;
+                  border: none;
+                  color: #fff;
+                  cursor: pointer;
+                }
+              }
+            }
+            .cardSummary {
+              border-top: 1px solid #e4e7ed;
+              padding-top: 15px;
+              padding-bottom: 15px;
+            }
+          }
+          .cardBtns {
+            display: flex;
+            a:first-child {
+              // margin-right: -4px;
+              background-color: #1e1f29;
+              display: inline-block;
+              width: 50%;
+              padding: 12px;
+              color: #fff;
+              text-align: center;
+              font-weight: 700;
+              transition: 0.2s all;
+              cursor: pointer;
+              font-family: "Montserrat", sans-serif;
+              font-size: 14px;
+              line-height: 1.4;
+              &:hover {
+                opacity: 0.9;
+              }
+            }
+            a {
+              display: inline-block;
+              width: 50%;
+              padding: 12px;
+              background-color: #d10024;
+              color: #fff;
+              text-align: center;
+              font-weight: 700;
+              transition: 0.2s all;
+              &:hover {
+                opacity: 0.9;
+              }
+            }
+          }
+        }
+        .active {
+          display: block;
         }
       }
     }
@@ -360,11 +467,10 @@ main {
           position: relative;
           background-color: #fff;
           margin: 15px;
-
           &:hover {
             .card-button {
               transition: 0.2s all;
-              margin-top: 0;
+              transform: translateY(0);
             }
           }
           .card {
@@ -487,8 +593,9 @@ main {
             text-align: center;
             padding: 15px;
             transition: 0.2s all;
-            margin-top: -70px;
+            transform: translateY(-70px);
             button {
+              cursor: pointer;
               position: relative;
               border: 2px solid transparent;
               height: 40px;
@@ -868,31 +975,30 @@ footer {
           }
         }
       }
-
     }
   }
-  .footer-bottom{
+  .footer-bottom {
     width: 100%;
     height: 100px;
-    background-color: #1E1F29;
+    background-color: #1e1f29;
     padding-top: 30px;
     padding-bottom: 30px;
-    .container{
-      .online-card{
+    .container {
+      .online-card {
         display: flex;
         text-align: center;
         align-items: center;
         justify-content: center;
         padding-right: 15px;
         padding-left: 15px;
-        .card-item{
+        .card-item {
           margin-right: 5px;
-          a{
+          a {
             font-size: 36px;
             display: block;
             font-weight: 500;
-            i{
-              color: #15161D;
+            i {
+              color: #15161d;
               font: normal normal normal 14px/1;
             }
           }

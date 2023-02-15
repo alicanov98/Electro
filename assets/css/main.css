@@ -126,7 +126,6 @@
   margin: 0 -4px 0 0;
   padding: 0 15px;
   height: 40px;
-  font-size: 14px;
   font-family: "Montserrat", sans-serif;
 }
 .header .bottom-header .container .search form .search-btn {
@@ -160,6 +159,7 @@
   align-items: center;
   flex-direction: column;
   position: relative;
+  cursor: pointer;
 }
 .header .bottom-header .container .userArea .userAreaCard i {
   color: #ffffff;
@@ -184,6 +184,108 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.header .bottom-header .container .userArea .cardDropdown {
+  width: 300px;
+  background-color: #fff;
+  position: absolute;
+  z-index: 99;
+  opacity: 1;
+  margin-top: 50px;
+  display: none;
+}
+.header .bottom-header .container .userArea .cardDropdown .cartBox {
+  padding: 15px 15px 0 15px;
+}
+.header .bottom-header .container .userArea .cardDropdown .cartBox .cardList {
+  max-height: 180px;
+  overflow-y: scroll;
+  margin-bottom: 15px;
+}
+.header .bottom-header .container .userArea .cardDropdown .cartBox .cardList .productWidget {
+  color: #333;
+  display: flex;
+  position: relative;
+}
+.header .bottom-header .container .userArea .cardDropdown .cartBox .cardList .productWidget .productImg img {
+  width: 60px;
+}
+.header .bottom-header .container .userArea .cardDropdown .cartBox .cardList .productWidget .productBody {
+  padding-left: 10px;
+  min-height: 60px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  color: #333;
+  font-size: 14px;
+  line-height: 1.42857143;
+  margin: 0 10px 10px;
+}
+.header .bottom-header .container .userArea .cardDropdown .cartBox .cardList .productWidget .productBody h3 a {
+  font-weight: 700;
+  transition: 0.2s color;
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 1.1;
+}
+.header .bottom-header .container .userArea .cardDropdown .cartBox .cardList .productWidget .productBody h3 a:hover {
+  color: #d10024;
+}
+.header .bottom-header .container .userArea .cardDropdown .cartBox .cardList .productWidget .delete {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  margin: 10px;
+  height: 17px;
+  text-align: center;
+  width: 15px;
+  font-size: 10px;
+  line-height: 1.1;
+  font-weight: 400;
+  padding: 0;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+.header .bottom-header .container .userArea .cardDropdown .cartBox .cardSummary {
+  border-top: 1px solid #e4e7ed;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.header .bottom-header .container .userArea .cardDropdown .cardBtns {
+  display: flex;
+}
+.header .bottom-header .container .userArea .cardDropdown .cardBtns a:first-child {
+  background-color: #1e1f29;
+  display: inline-block;
+  width: 50%;
+  padding: 12px;
+  color: #fff;
+  text-align: center;
+  font-weight: 700;
+  transition: 0.2s all;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+}
+.header .bottom-header .container .userArea .cardDropdown .cardBtns a:first-child:hover {
+  opacity: 0.9;
+}
+.header .bottom-header .container .userArea .cardDropdown .cardBtns a {
+  display: inline-block;
+  width: 50%;
+  padding: 12px;
+  background-color: #d10024;
+  color: #fff;
+  text-align: center;
+  font-weight: 700;
+  transition: 0.2s all;
+}
+.header .bottom-header .container .userArea .cardDropdown .cardBtns a:hover {
+  opacity: 0.9;
+}
+.header .bottom-header .container .userArea .active {
+  display: block;
 }
 
 .nav-bar {
@@ -392,7 +494,7 @@ main .new-products .container .new-production-card-box .card-info {
 }
 main .new-products .container .new-production-card-box .card-info:hover .card-button {
   transition: 0.2s all;
-  margin-top: 0;
+  transform: translateY(0);
 }
 main .new-products .container .new-production-card-box .card-info .card {
   transition: 0.2s all;
@@ -514,9 +616,10 @@ main .new-products .container .new-production-card-box .card-info .card-button {
   text-align: center;
   padding: 15px;
   transition: 0.2s all;
-  margin-top: -70px;
+  transform: translateY(-70px);
 }
 main .new-products .container .new-production-card-box .card-info .card-button button {
+  cursor: pointer;
   position: relative;
   border: 2px solid transparent;
   height: 40px;
@@ -880,7 +983,7 @@ footer .top-footer .container .content-footter .footer-info .footer-list .footer
 footer .footer-bottom {
   width: 100%;
   height: 100px;
-  background-color: #1E1F29;
+  background-color: #1e1f29;
   padding-top: 30px;
   padding-bottom: 30px;
 }
@@ -901,8 +1004,82 @@ footer .footer-bottom .container .online-card .card-item a {
   font-weight: 500;
 }
 footer .footer-bottom .container .online-card .card-item a i {
-  color: #15161D;
+  color: #15161d;
   font: normal normal normal 14px/1;
 }
 
-/* --------------------------- End footer section --------------------------- *//*# sourceMappingURL=main.css.map */
+/* --------------------------- End footer section --------------------------- */
+.my-accound .container .login-accound {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.my-accound .container .login-accound .accound-title {
+  width: 100%;
+  border-bottom: 1px solid #a1a0a0;
+  margin: 0 0 16.8px;
+  color: #6b6b6b;
+  padding: 0 0 10px;
+}
+.my-accound .container .form-accound {
+  width: 100%;
+}
+.my-accound .container .form-accound .title {
+  margin: 5px 0;
+  font-size: 18px;
+  color: #6B6B6B;
+  cursor: pointer;
+  font-weight: 700;
+}
+.my-accound .container .form-accound .input {
+  width: 100%;
+  padding: 12px 20px;
+  border-radius: 6px;
+  background: #fafafa;
+  border: 2px solid #e8e8e8;
+  color: #ababb3;
+  transition: all 0.5s ease;
+  margin: 0;
+  height: 51px;
+}
+.my-accound .container .form-accound .input:focus {
+  outline: none;
+  border-color: #15161d;
+  box-shadow: none;
+}
+.my-accound .container .form-accound .btn {
+  background-color: #15161d;
+  padding: 18px 48px;
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.4;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: #a1a0a0;
+  transition: all 0.9s ease;
+}
+.my-accound .container .form-accound .btn:hover {
+  background-color: #a1a0a0;
+  color: #15161d;
+}
+.my-accound .container .form-accound .lost-password {
+  margin: 10px 0;
+}
+.my-accound .container .form-accound .lost-password a {
+  transition: all 0.3s ease;
+  color: #6f5499;
+  line-height: 1.7;
+  font-size: 14px;
+  cursor: pointer;
+}
+.my-accound .container .form-accound .lost-password a:hover {
+  color: #6B6B6B;
+}/*# sourceMappingURL=main.css.map */
